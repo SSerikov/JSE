@@ -1,6 +1,6 @@
 package ru.serikov.tm;
 
-import java.util.Arrays;
+import static ru.serikov.tm.constant.TerminalConst.*;
 
 /**
  * Тестовое приложение
@@ -17,9 +17,17 @@ public class Main {
         if (args == null) return;
         if (args.length < 1) return;
         final String param = args[0];
-        if ("version".equals(param)) displayVersion();
-        if ("about".equals(param)) displayAbout();
-        if ("help".equals(param)) displayHelp ();
+        switch (param) {
+            case CMD_VERSION: displayVersion();
+            case CMD_ABOUT: displayAbout();
+            case CMD_HELP: displayHelp ();
+            default: displayError();
+        }
+    }
+
+    private static void displayError() {
+        System.out.println("Error! Unknown program argument...");
+        System.exit(-1);
     }
 
     private static void displayWelcome() {
