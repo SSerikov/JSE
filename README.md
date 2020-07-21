@@ -20,16 +20,24 @@
 
 ## Команды для сборки приложения
 
-- mvn clean    -- удаляет директорию сборки
-- mvn package  -- создание пакета 
-- mvn instal   -- установка
+- `mvn clean`    -- удаляет директорию сборки
+- `mvn package`  -- создание пакета 
+- `mvn instal`   -- установка
 
 ## Команды для запуска приложения
 
 В директории с полученным исполняемым файлом выполнить
 
-`java -jar ./task-manager-1.0.0.jar`
+```bash
+java -jar ./task-manager-1.0.0.jar
+```
 
 Чтобы ознакомиться со списком доступных команд необходимо выполнить
 
-`java -jar ./task-manager-1.0.0.jar help`
+```bash
+java -jar ./task-manager-1.0.0.jar help
+```
+
+## Ссылка на резервную копию проекта
+
+https://github.com/SSerikov/JSE
